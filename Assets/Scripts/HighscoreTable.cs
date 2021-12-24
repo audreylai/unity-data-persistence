@@ -11,7 +11,7 @@ public class HighscoreTable : MonoBehaviour
   {
     if (DataManager.Instance != null)
     {
-      foreach (DataManager.HighscoreData entry in DataManager.Instance.highscoreList.GetRange(0, 3)){
+      foreach (DataManager.HighscoreData entry in DataManager.Instance.highscoreList){
         table.Rows++;
         int row = DataManager.Instance.highscoreList.IndexOf(entry)+1;
         table.GetCell(row, 0).text = entry.playerName;
